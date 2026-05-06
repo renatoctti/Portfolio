@@ -129,9 +129,7 @@ export default function Hero() {
             {t.hero.cta_projects}
           </a>
           <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/cv"
             className="px-6 py-3 rounded-lg border border-[#2e2e2e] hover:border-[#7c3aed] text-[#9ca3af] hover:text-white font-semibold transition-all duration-200 text-sm"
           >
             {t.hero.cta_cv}
