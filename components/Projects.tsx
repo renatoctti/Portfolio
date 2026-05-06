@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Bot, Mic, Calculator, BarChart2, Car } from "lucide-react";
+import { Bot, Mic, Calculator, BarChart2, Car, Ticket } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimateIn from "./AnimateIn";
 
@@ -56,6 +56,15 @@ export default function Projects() {
       integrations: ["REST API", "JDBC", "Vercel Deploy"],
       icon: Car as ProjectIcon,
       github: "https://github.com/renatoctti/DePinhoMultimidias",
+      private: false,
+    },
+    {
+      title: t.projects.tickettrade_title,
+      description: t.projects.tickettrade_desc as string[],
+      stack: ["Java", "Spring Boot", "SQL", "JavaScript", "HTML", "CSS"],
+      integrations: ["REST API", "Git"],
+      icon: Ticket as ProjectIcon,
+      github: null as string | null,
       private: false,
     },
   ];

@@ -115,6 +115,15 @@ export const translations = {
         "Admin panel for catalog management, stock control and order tracking",
         "REST API backend built with Spring Boot, persisted in MySQL via JDBC",
       ],
+      tickettrade_title: "TicketTrade",
+      tickettrade_desc: [
+        "Marketplace platform for buying, selling, and trading event tickets",
+        "Backend services built with Java and Spring Boot with SQL database integration",
+        "RESTful API layer handling listings, transactions, and user management",
+        "Frontend implemented with JavaScript, HTML, and CSS",
+        "Secure authentication and authorization flow for buyers and sellers",
+        "Collaborative development with Git and version control best practices",
+      ],
     },
     education: {
       section_title: "Education",
@@ -255,6 +264,15 @@ export const translations = {
         "Carrinho de compras com fluxo completo de checkout e processamento de pagamento",
         "Painel administrativo para gestão de catálogo, controle de estoque e rastreamento de pedidos",
         "Backend REST API com Spring Boot, persistência em MySQL via JDBC",
+      ],
+      tickettrade_title: "TicketTrade",
+      tickettrade_desc: [
+        "Marketplace para compra, venda e troca de ingressos para eventos",
+        "Backend com Java e Spring Boot integrado a banco de dados SQL",
+        "Camada REST API para gerenciar anúncios, transações e usuários",
+        "Frontend implementado com JavaScript, HTML e CSS",
+        "Fluxo de autenticação e autorização seguro para compradores e vendedores",
+        "Desenvolvimento colaborativo com Git e boas práticas de controle de versão",
       ],
     },
     education: {

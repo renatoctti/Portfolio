@@ -72,6 +72,13 @@ export default function Navbar() {
         {/* GitHub + Lang toggle + mobile hamburger */}
         <div className="flex items-center gap-3">
           <a
+            href="/cv"
+            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-[#7c3aed]/40 text-[#a855f7] hover:border-[#7c3aed] hover:text-white transition-all duration-200 hidden md:inline-flex items-center gap-1"
+          >
+            CV
+          </a>
+
+          <a
             href="https://github.com/renatoctti"
             target="_blank"
             rel="noopener noreferrer"
