@@ -1,7 +1,10 @@
 "use client";
 import { useState } from "react";
+import { Bot, Mic, Calculator, BarChart2, Car } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimateIn from "./AnimateIn";
+
+type ProjectIcon = typeof Bot;
 
 export default function Projects() {
   const { t } = useLanguage();
@@ -15,7 +18,7 @@ export default function Projects() {
       description: t.projects.linkedin_bot_desc as string[],
       stack: ["Python", "Flask", "Supabase"],
       integrations: ["Unipile API", "OpenRouter API", "GPT-4o"],
-      emoji: "🤖",
+      icon: Bot as ProjectIcon,
       github: null as string | null,
       private: true,
     },
@@ -24,7 +27,7 @@ export default function Projects() {
       description: t.projects.deepmeet_desc as string[],
       stack: ["React", "TypeScript", "Vite", "Tailwind", "Supabase", "Edge Functions"],
       integrations: ["MS Graph API", "Deepgram API", "OpenRouter API", "Supabase Auth"],
-      emoji: "🎙️",
+      icon: Mic as ProjectIcon,
       github: null as string | null,
       private: true,
     },
@@ -33,7 +36,7 @@ export default function Projects() {
       description: t.projects.calculadora_desc as string[],
       stack: ["React 19", "TanStack Router", "Tailwind", "Supabase", "Framer Motion", "Zod"],
       integrations: ["HubSpot API", "Supabase Auth", "Email OTP"],
-      emoji: "🧮",
+      icon: Calculator as ProjectIcon,
       github: null as string | null,
       private: true,
     },
@@ -42,7 +45,7 @@ export default function Projects() {
       description: t.projects.oportunidades_desc as string[],
       stack: ["Python", "pandas"],
       integrations: ["OpenRouter API", "GPT-4", "HubSpot API", "Supabase", "Deepgram"],
-      emoji: "📊",
+      icon: BarChart2 as ProjectIcon,
       github: null as string | null,
       private: true,
     },
@@ -51,7 +54,7 @@ export default function Projects() {
       description: t.projects.depinho_desc as string[],
       stack: ["Java", "Spring Boot", "MySQL", "Maven"],
       integrations: ["REST API", "JDBC", "Vercel Deploy"],
-      emoji: "🚗",
+      icon: Car as ProjectIcon,
       github: "https://github.com/renatoctti/DePinhoMultimidias",
       private: false,
     },
@@ -115,32 +118,23 @@ export default function Projects() {
                 transition: "opacity 0.2s, transform 0.2s",
               }}
             >
-              {/* Inner: 3D tilt + spotlight */}
+              {/* Inner: spotlight */}
               <div
                 className="rounded-xl bg-[#242424] border border-[#7c3aed]/40 p-7 md:p-8 card-spotlight"
-                style={{ transition: "transform 0.18s ease" }}
                 onMouseMove={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
                   const x = e.clientX - rect.left;
                   const y = e.clientY - rect.top;
                   e.currentTarget.style.setProperty("--mx", `${x}px`);
                   e.currentTarget.style.setProperty("--my", `${y}px`);
-                  if (!animating) {
-                    const cx = rect.width / 2;
-                    const cy = rect.height / 2;
-                    const rX = ((y - cy) / cy) * -4;
-                    const rY = ((x - cx) / cx) * 4;
-                    e.currentTarget.style.transform = `perspective(900px) rotateX(${rX}deg) rotateY(${rY}deg)`;
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg)";
                 }}
               >
                 {/* Card header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-4">
-                    <span className="text-5xl">{project.emoji}</span>
+                    <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#7c3aed]/10 border border-[#7c3aed]/20 text-[#a855f7] flex-shrink-0">
+                      <project.icon size={24} strokeWidth={1.5} />
+                    </div>
                     <div>
                       <h3 className="text-white font-bold text-2xl leading-tight">{project.title}</h3>
                       {project.private && (

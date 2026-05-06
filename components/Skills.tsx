@@ -20,10 +20,10 @@ const techSkills = [
 ];
 
 const spokenLanguages = [
-  { flag: "🇧🇷", name: "Português",  level: "Native" },
-  { flag: "🇮🇹", name: "Italiano",   level: "Native" },
-  { flag: "🇺🇸", name: "English",    level: "Full Professional" },
-  { flag: "🇪🇸", name: "Español",    level: "Professional Working" },
+  { code: "PT", name: "Português", level: "Native" },
+  { code: "IT", name: "Italiano",  level: "Native" },
+  { code: "EN", name: "English",   level: "Full Professional" },
+  { code: "ES", name: "Español",   level: "Professional Working" },
 ];
 
 export default function Skills() {
@@ -62,7 +62,9 @@ export default function Skills() {
               {spokenLanguages.map((lang, i) => (
                 <AnimateIn key={lang.name} delay={i * 80} from="right">
                   <div className="flex items-center gap-4 bg-[#242424] border border-[#2e2e2e] rounded-xl p-4 hover:border-[#7c3aed]/40 transition-colors duration-200">
-                    <span className="text-3xl">{lang.flag}</span>
+                    <span className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#7c3aed]/10 border border-[#7c3aed]/20 text-[#a855f7] text-xs font-bold font-mono flex-shrink-0">
+                      {lang.code}
+                    </span>
                     <div>
                       <p className="text-white font-semibold">{lang.name}</p>
                       <p className="text-[#9ca3af] text-sm">{lang.level}</p>

@@ -1,4 +1,5 @@
 "use client";
+import { Globe, Plane, Terminal } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimateIn from "./AnimateIn";
 
@@ -77,9 +78,9 @@ const KW_PT = {
 
 // ── Highlight cards ───────────────────────────────────────────────────────────
 const getHighlights = (t: ReturnType<typeof useLanguage>["t"]) => [
-  { icon: "🌐", title: t.about.highlight_languages, sub: t.about.highlight_languages_sub },
-  { icon: "✈️",  title: t.about.highlight_intl,      sub: t.about.highlight_intl_sub      },
-  { icon: "🐧", title: t.about.highlight_redhat,    sub: t.about.highlight_redhat_sub    },
+  { icon: Globe,    title: t.about.highlight_languages, sub: t.about.highlight_languages_sub },
+  { icon: Plane,    title: t.about.highlight_intl,      sub: t.about.highlight_intl_sub      },
+  { icon: Terminal, title: t.about.highlight_redhat,    sub: t.about.highlight_redhat_sub    },
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -143,7 +144,9 @@ export default function About() {
               {getHighlights(t).map((h, i) => (
                 <AnimateIn key={h.title} delay={i * 80} from="right">
                   <div className="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4 text-center hover:border-[#7c3aed]/50 transition-colors duration-200">
-                    <div className="text-2xl mb-2">{h.icon}</div>
+                    <div className="flex justify-center mb-2 text-[#7c3aed]">
+                      <h.icon size={22} strokeWidth={1.5} />
+                    </div>
                     <p className="text-white font-semibold text-sm">{h.title}</p>
                     <p className="text-[#9ca3af] text-xs mt-1">{h.sub}</p>
                   </div>
