@@ -60,20 +60,38 @@ const content = {
     projects_title: "Projects",
     projects: [
       {
+        title: "LinkedIn Lead Bot",
+        subtitle: "Python, GPT-4o, Flask, Supabase, Unipile API · Confidential — Vennx",
+        bullets: [
+          "Two-stage GPT-4o qualification pipeline (keyword pre-filter → semantic LLM scoring) across 36 topic × pain-point combinations",
+          "Automated personalized outreach via Unipile API; real-time Flask dashboard with engagement metrics",
+          "All leads, posts and interactions deduplicated and persisted in Supabase",
+        ],
+      },
+      {
+        title: "DeepMeet",
+        subtitle: "Next.js, Supabase, MS Graph API, AI · Confidential — Vennx",
+        bullets: [
+          "Full platform rebuild: tenant/user permission architecture designed from scratch with Supabase Auth",
+          "MS Graph API integration for automatic Teams recording fetching; AI prompts in DB for multilingual output (PT/EN/ES)",
+          "Autonomous Edge Function cron jobs for hands-free recording processing; 30+ production bugs resolved",
+        ],
+      },
+      {
+        title: "Vennx Calculator",
+        subtitle: "Next.js, HubSpot API · Confidential — Vennx",
+        bullets: [
+          "Multi-step web estimator for GRC, IAM and Software Factory consulting with animated Big4 pricing comparison",
+          "OTP email verification for lead qualification; every submission auto-pushed as a tracked deal into HubSpot CRM",
+        ],
+      },
+      {
         title: "DePinho Multimídias",
-        subtitle: "E-commerce · Java, Spring Boot, MySQL, Maven",
+        subtitle: "E-commerce · Java, Spring Boot, MySQL",
         github: "https://github.com/renatoctti/DePinhoMultimidias",
         bullets: [
           "Full e-commerce platform for automotive multimedia with smart car-model compatibility filter and MercadoPago payment integration",
           "Role-based auth with Spring Security; admin panel for catalog management, stock control, and order tracking",
-        ],
-      },
-      {
-        title: "TicketTrade",
-        subtitle: "Marketplace · Java, Spring Boot, SQL, JavaScript",
-        bullets: [
-          "Marketplace for buying, selling, and trading event tickets with secure auth flow for buyers and sellers",
-          "RESTful backend with Java/Spring Boot, SQL database integration, collaborative development with Git",
         ],
       },
     ],
@@ -141,20 +159,38 @@ const content = {
     projects_title: "Projetos",
     projects: [
       {
+        title: "LinkedIn Lead Bot",
+        subtitle: "Python, GPT-4o, Flask, Supabase, Unipile API · Confidencial — Vennx",
+        bullets: [
+          "Pipeline GPT-4o em dois estágios (pré-filtro por palavras-chave → qualificação semântica LLM) em 36 combinações de tópico × dor",
+          "Outreach personalizado automatizado via Unipile API; dashboard Flask em tempo real com métricas de engajamento",
+          "Todos os leads, posts e interações deduplicados e persistidos no Supabase",
+        ],
+      },
+      {
+        title: "DeepMeet",
+        subtitle: "Next.js, Supabase, MS Graph API, IA · Confidencial — Vennx",
+        bullets: [
+          "Rebuild completo da plataforma: arquitetura tenant/usuário projetada do zero com Supabase Auth",
+          "Integração com MS Graph API para busca automática de gravações do Teams; prompts de IA no banco para saída multilíngue (PT/EN/ES)",
+          "Cron jobs autônomos via Edge Functions para processamento contínuo de gravações; 30+ bugs de produção resolvidos",
+        ],
+      },
+      {
+        title: "Calculadora Vennx",
+        subtitle: "Next.js, HubSpot API · Confidencial — Vennx",
+        bullets: [
+          "Estimador web multi-etapas para projetos de GRC, IAM e Fábrica de Software com comparativo animado de preços Big4",
+          "Verificação OTP por e-mail para qualificação de leads; cada envio vira um negócio rastreado no HubSpot CRM",
+        ],
+      },
+      {
         title: "DePinho Multimídias",
-        subtitle: "E-commerce · Java, Spring Boot, MySQL, Maven",
+        subtitle: "E-commerce · Java, Spring Boot, MySQL",
         github: "https://github.com/renatoctti/DePinhoMultimidias",
         bullets: [
           "Plataforma completa de e-commerce para multimídia automotiva com filtro inteligente de compatibilidade e integração com MercadoPago",
           "Autenticação com controle de acesso por papel via Spring Security; painel admin para gestão de catálogo, estoque e pedidos",
-        ],
-      },
-      {
-        title: "TicketTrade",
-        subtitle: "Marketplace · Java, Spring Boot, SQL, JavaScript",
-        bullets: [
-          "Marketplace para compra, venda e troca de ingressos para eventos com fluxo de autenticação seguro",
-          "Backend RESTful com Java/Spring Boot, banco SQL e desenvolvimento colaborativo com Git",
         ],
       },
     ],
