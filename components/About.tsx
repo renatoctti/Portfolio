@@ -9,7 +9,7 @@ interface Keyword { text: string; type: KwType }
 function hl(text: string, keywords: Keyword[]) {
   if (!keywords.length) return <>{text}</>;
   const escaped = keywords.map(k => k.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
-  const regex = new RegExp(`(${escaped.join("|")})`, "gi");
+  const regex = new RegExp(`(?<![a-zA-ZÀ-ÿ])(${escaped.join("|")})(?![a-zA-ZÀ-ÿ])`, "gi");
   const parts = text.split(regex);
   return (
     <>
