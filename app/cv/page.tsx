@@ -85,15 +85,6 @@ const content = {
           "OTP email verification for lead qualification; every submission auto-pushed as a tracked deal into HubSpot CRM",
         ],
       },
-      {
-        title: "DePinho Multimídias",
-        subtitle: "E-commerce · Java, Spring Boot, MySQL",
-        github: "https://github.com/renatoctti/DePinhoMultimidias",
-        bullets: [
-          "Full e-commerce platform for automotive multimedia with smart car-model compatibility filter and MercadoPago payment integration",
-          "Role-based auth with Spring Security; admin panel for catalog management, stock control, and order tracking",
-        ],
-      },
     ],
     education_title: "Education",
     education: [
@@ -182,15 +173,6 @@ const content = {
         bullets: [
           "Estimador web multi-etapas para projetos de GRC, IAM e Fábrica de Software com comparativo animado de preços Big4",
           "Verificação OTP por e-mail para qualificação de leads; cada envio vira um negócio rastreado no HubSpot CRM",
-        ],
-      },
-      {
-        title: "DePinho Multimídias",
-        subtitle: "E-commerce · Java, Spring Boot, MySQL",
-        github: "https://github.com/renatoctti/DePinhoMultimidias",
-        bullets: [
-          "Plataforma completa de e-commerce para multimídia automotiva com filtro inteligente de compatibilidade e integração com MercadoPago",
-          "Autenticação com controle de acesso por papel via Spring Security; painel admin para gestão de catálogo, estoque e pedidos",
         ],
       },
     ],
