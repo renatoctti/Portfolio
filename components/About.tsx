@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Globe, Plane, Terminal } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimateIn from "./AnimateIn";
@@ -139,10 +140,12 @@ export default function About() {
                   }}
                 />
                 <div className="absolute inset-[3px] rounded-full overflow-hidden bg-[#0f0f0f]">
-                  <img
+                  <Image
                     src="/photo.jpg"
                     alt="Renato Cazzoletti"
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="128px"
+                    className="object-cover"
                   />
                 </div>
               </div>

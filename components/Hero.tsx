@@ -21,19 +21,11 @@ function useCounter(end: number, duration = 1400, trigger: boolean) {
 
 type Phase = "typing" | "pausing" | "deleting" | "waiting";
 
+// Remounted (via `key`) when the language switches, which resets the state.
 function useTypewriter(texts: string[]) {
   const [displayed, setDisplayed] = useState("");
   const [idx, setIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>("waiting");
-  const key = texts.join("|");
-
-  // reset when language switches
-  useEffect(() => {
-    setDisplayed("");
-    setIdx(0);
-    setPhase("waiting");
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key]);
 
   useEffect(() => {
     const current = texts[idx] ?? "";
@@ -47,17 +39,19 @@ function useTypewriter(texts: string[]) {
     }
     if (phase === "deleting") {
       if (displayed.length === 0) {
-        setIdx((i) => (i + 1) % texts.length);
-        setPhase("waiting");
-        return;
+        const t = setTimeout(() => {
+          setIdx((i) => (i + 1) % texts.length);
+          setPhase("waiting");
+        }, 0);
+        return () => clearTimeout(t);
       }
       const t = setTimeout(() => setDisplayed((d) => d.slice(0, -1)), 32);
       return () => clearTimeout(t);
     }
     // typing
     if (displayed.length >= current.length) {
-      setPhase("pausing");
-      return;
+      const t = setTimeout(() => setPhase("pausing"), 0);
+      return () => clearTimeout(t);
     }
     const t = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 65);
     return () => clearTimeout(t);
@@ -66,8 +60,12 @@ function useTypewriter(texts: string[]) {
   return displayed;
 }
 
+function TypedRole({ roles }: { roles: string[] }) {
+  return <>{useTypewriter(roles)}</>;
+}
+
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -78,7 +76,6 @@ export default function Hero() {
   const projects  = useCounter(7, 1200, ready);
   const languages = useCounter(4, 1000, ready);
   const roles = t.hero.roles as string[];
-  const typedRole = useTypewriter(roles);
 
   return (
     <section className="hero-bg min-h-screen flex items-center pt-16 relative overflow-hidden">
@@ -106,7 +103,7 @@ export default function Hero() {
             className="text-xl md:text-2xl font-semibold mb-1"
             style={{ fontFamily: "var(--font-geist-mono)" }}
           >
-            <span className="gradient-text">{typedRole}</span>
+            <span className="gradient-text"><TypedRole key={lang} roles={roles} /></span>
             <span
               className="inline-block w-0.5 h-5 bg-[#a855f7] ml-0.5 align-middle"
               style={{ animation: "blink 1.1s ease-in-out infinite" }}

@@ -1,7 +1,28 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useSyncExternalStore } from "react";
 import { translations, type Lang, type Translations } from "./i18n";
+
+// The saved language lives in localStorage; useSyncExternalStore reads it after
+// hydration (server snapshot is always "en"), so there is no mismatch.
+const listeners = new Set<() => void>();
+
+const subscribe = (cb: () => void) => {
+  listeners.add(cb);
+  return () => {
+    listeners.delete(cb);
+  };
+};
+
+const getSnapshot = (): Lang => {
+  try {
+    return localStorage.getItem("lang") === "pt" ? "pt" : "en";
+  } catch {
+    return "en";
+  }
+};
+
+const getServerSnapshot = (): Lang => "en";
 
 interface LanguageContextValue {
   lang: Lang;
@@ -16,19 +37,15 @@ const LanguageContext = createContext<LanguageContextValue>({
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<Lang>("en");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("lang") as Lang | null;
-    if (saved === "en" || saved === "pt") setLang(saved);
-  }, []);
+  const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggle = () => {
-    setLang((prev) => {
-      const next = prev === "en" ? "pt" : "en";
-      localStorage.setItem("lang", next);
-      return next;
-    });
+    try {
+      localStorage.setItem("lang", lang === "en" ? "pt" : "en");
+    } catch {
+      // storage unavailable: the language just won't persist
+    }
+    listeners.forEach((cb) => cb());
   };
 
   return (

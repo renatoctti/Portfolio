@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Printer, Mail, Phone, MapPin, Globe } from "lucide-react";
 
 const GithubIcon = () => (
@@ -235,9 +236,9 @@ export default function CVPage() {
 
       {/* Toolbar */}
       <div className="max-w-4xl mx-auto mb-5 flex items-center justify-between print:hidden">
-        <a href="/" className="text-[#9ca3af] text-sm hover:text-white transition-colors flex items-center gap-1.5">
+        <Link href="/" className="text-[#9ca3af] text-sm hover:text-white transition-colors flex items-center gap-1.5">
           {c.back}
-        </a>
+        </Link>
 
         <div className="flex items-center gap-3">
           {/* Language toggle */}
