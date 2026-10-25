@@ -75,7 +75,7 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  const projects  = useCounter(5, 1200, ready);
+  const projects  = useCounter(7, 1200, ready);
   const languages = useCounter(4, 1000, ready);
   const roles = t.hero.roles as string[];
   const typedRole = useTypewriter(roles);
@@ -139,7 +139,7 @@ export default function Hero() {
         {/* Stats */}
         <div className="animate-fade-in-up delay-600 flex flex-wrap items-center gap-0">
           {[
-            { value: projects,  suffix: "+", label: t.hero.stat_projects },
+            { value: projects,  suffix: "",  label: t.hero.stat_projects },
             { value: languages, suffix: "",  label: t.hero.stat_languages },
           ].map((s, i) => (
             <div key={s.label} className="flex items-center">

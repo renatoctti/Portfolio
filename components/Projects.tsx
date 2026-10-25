@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Bot, Mic, Calculator, BarChart2, Car, Ticket } from "lucide-react";
+import { Bot, Mic, Calculator, BarChart2, Car, Ticket, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimateIn from "./AnimateIn";
 
@@ -13,6 +13,15 @@ export default function Projects() {
   const [animating, setAnimating] = useState(false);
 
   const projects = [
+    {
+      title: t.projects.kyc_title,
+      description: t.projects.kyc_desc as string[],
+      stack: ["TypeScript", "NestJS", "React", "Next.js", "PostgreSQL", "Drizzle ORM"],
+      integrations: ["External data providers", "pg-boss", "GitHub Actions", "AWS", "Vitest"],
+      icon: ShieldCheck as ProjectIcon,
+      github: null as string | null,
+      private: true,
+    },
     {
       title: t.projects.linkedin_bot_title,
       description: t.projects.linkedin_bot_desc as string[],

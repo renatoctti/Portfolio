@@ -51,7 +51,7 @@ export default function Contact() {
 
   const externalLinks = [
     {
-      href: "https://www.linkedin.com/in/renato-cazzoletti-179862299",
+      href: "https://www.linkedin.com/in/renato-cazzoletti",
       icon: <IconLinkedIn />,
       label: t.contact.linkedin_label,
       value: "linkedin.com/in/renato-cazzoletti",

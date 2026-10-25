@@ -9,13 +9,22 @@ export default function Experience() {
 
   const jobs = [
     {
+      title: t.experience.one_title,
+      company: t.experience.one_company,
+      period: t.experience.one_period,
+      location: t.experience.one_location,
+      description: t.experience.one_desc,
+      tags: ["TypeScript", "NestJS", "React", "PostgreSQL", "AWS", "Vitest"],
+      current: true,
+    },
+    {
       title: t.experience.vennx_title,
       company: t.experience.vennx_company,
       period: t.experience.vennx_period,
       location: t.experience.vennx_location,
       description: t.experience.vennx_desc,
       tags: ["Python", "AI/LLM", "REST API", "Playwright", "Supabase", "React"],
-      current: true,
+      current: false,
     },
     {
       title: t.experience.camara_title,

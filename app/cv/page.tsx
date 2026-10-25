@@ -21,162 +21,172 @@ const content = {
   en: {
     back: "← Back to Portfolio",
     download: "Download / Print PDF",
-    tagline: "Software Engineer · AI Automation & Full-Stack · Python, React, Java",
-    summary_title: "Summary",
+    tagline: "Full Cycle Software Engineer · TypeScript, Node.js, React, PostgreSQL, AWS · AI Automation",
+    summary_title: "Professional Summary",
     summary:
-      "Software Engineering student at PUC Minas (graduating Dec 2026) and Technology Intern at Vennx, where I build AI-powered automation systems, REST API integrations, and full-stack SaaS products. Experienced in Python, Java (Spring Boot), and React. International academic background — exchange at Politecnico di Milano — with fluency in 4 languages, enabling effective collaboration in global teams.",
+      "Full Cycle Software Engineer with 1.5 years of professional experience shipping production systems end to end (TypeScript, Node.js, React, PostgreSQL, AWS) and applied AI automation (LLMs, RAG). Currently at One Investimentos, building a corporate due-diligence platform for a Brazilian wealth advisory firm; previously at Vennx, delivering AI-powered SaaS and automation. B.S. in Software Engineering student at PUC Minas (graduating Jun 2027). Based in Brazil (UTC-3), available for remote roles. Trilingual (Portuguese, Italian, English).",
     skills_title: "Technical Skills",
     skill_groups: [
-      { title: "Core", skills: ["Python", "AI / LLM", "RAG Pipelines", "REST API", "Automation", "Web Scraping", "Playwright"] },
-      { title: "Development", skills: ["Java / Spring Boot", "React", "TypeScript", "Next.js", "SQL", "GOLANG", "Flask", "PHP"] },
-      { title: "Tools & Methods", skills: ["Git", "Supabase", "Linux / Red Hat", "Agile / Scrum / Kanban", "Low-code / No-code"] },
+      { title: "Languages", skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL"] },
+      { title: "Backend", skills: ["Node.js (NestJS)", "REST API design", "Event-driven background jobs", "FastAPI", "Celery", "Spring Boot", "Supabase Edge Functions"] },
+      { title: "Frontend & Data", skills: ["React", "Next.js", "PostgreSQL", "Drizzle ORM", "Supabase"] },
+      { title: "AI & Automation", skills: ["LLMs (OpenAI GPT-4 / OpenRouter)", "RAG", "Prompt Engineering", "Web Scraping (Playwright)", "Process Automation"] },
+      { title: "Cloud & DevOps", skills: ["AWS", "Docker", "GitHub Actions (CI/CD)", "Git", "Linux"] },
+      { title: "Testing & Practices", skills: ["Vitest", "pytest", "JUnit", "Unit / integration / E2E testing", "TDD", "Code review", "Agile (Scrum, Kanban)"] },
     ],
     experience_title: "Professional Experience",
     experience: [
       {
-        title: "Technology Intern",
-        company: "Vennx",
-        period: "Feb 2026 – Present",
-        location: "Belo Horizonte, MG",
+        title: "Full Cycle Developer",
+        company: "One Investimentos",
+        period: "Sep 2026 – Present",
+        location: "Nova Lima, MG · Brazilian wealth advisory firm (R$ 20B+ under advisory), BTG Pactual partner",
         bullets: [
-          "Built AI-powered LinkedIn outreach bot with GPT-4o two-stage qualification pipeline across 36 topic × pain-point combinations",
-          "Rebuilt DeepMeet platform from scratch: tenant/user permission architecture, MS Graph API integration, 30+ production bugs resolved",
-          "Developed Vennx Calculator — multi-step web estimator with HubSpot CRM integration and OTP email lead qualification",
-          "Created Opportunity Detector: Teams transcript analysis tool that auto-syncs deals and contacts into HubSpot pipeline",
-          "Built REST API integrations, Python automation scripts, and web scraping solutions for data extraction and process optimization",
-          "Leveraged Supabase Edge Functions, low-code/no-code platforms, and Generative AI to accelerate delivery",
+          "Built the Corporate Client Due Diligence (KYC) platform: parallel queries to two external data providers, cross-checking of every shared field, lawsuit and shareholder, and an analyst workflow to resolve divergences (choose a source or enter a manual value, with bulk actions).",
+          "Automated shareholder checks and evidence extraction from provider PDF reports; added a 10-criteria risk-scoring calculator, versioned KYC dossiers exported to PDF, and a committee approval flow with role-based permissions and e-mail notifications.",
+          "Delivered a webhook for a reconciliation application with operator authorization, audit trail and a documented contract; built financial data views for the analytics team and event-driven background jobs.",
+          "Cover the module with 1,000+ automated unit and end-to-end tests (Vitest) and ship through GitHub Actions CI/CD on AWS. Stack: TypeScript, Node.js (NestJS), React (Next.js), PostgreSQL (Drizzle ORM).",
         ],
-        confidential: "Projects developed (confidential): LinkedIn Lead Bot, DeepMeet, Vennx Calculator, Opportunity Detector",
       },
       {
-        title: "Market Research Administrator",
-        company: "Italian-Brazilian Chamber of Commerce, Industry and Agriculture of MG",
+        title: "Full-Stack Developer",
+        company: "Vennx",
+        period: "Jul 2025 – Sep 2026",
+        location: "Belo Horizonte, MG · AI-powered software, SaaS & automation",
+        bullets: [
+          "Developed the Opportunity Detector, which analyzes Microsoft Teams transcripts and auto-syncs deals and contacts into HubSpot CRM, eliminating 10+ hours/week of manual data entry.",
+          "Created the Vennx Calculator, a multi-step web estimator with HubSpot CRM integration and OTP email lead qualification, feeding qualified leads straight into the sales pipeline.",
+          "Built 6 REST API integrations (HubSpot, Teams, Deepgram, OpenRouter, Unipile, Supabase), Python automation and web scraping solutions, and delivered features across 4 internal SaaS products using Supabase Edge Functions and Generative AI (LLMs).",
+        ],
+      },
+      {
+        title: "Market Research Intern",
+        company: "Italian-Brazilian Chamber of Commerce",
         period: "Jun 2021 – Dec 2021",
         location: "Belo Horizonte, MG",
         bullets: [
-          "Conducted market data analysis and trend research to support strategic decision-making",
-          "Built client communication skills in a multilingual environment; contributed to technical diploma in Administration",
+          "Market research and trend analysis for member companies, supporting clients in Portuguese, Italian and English.",
         ],
       },
     ],
     projects_title: "Projects",
     projects: [
       {
-        title: "DePinho Multimídias",
-        subtitle: "E-commerce · Java, Spring Boot, MySQL, Maven",
-        github: "https://github.com/renatoctti/DePinhoMultimidias",
+        title: "DeepMeet — AI meeting-intelligence platform (Vennx)",
+        subtitle: "Python, FastAPI, React, GPT-4, RAG",
         bullets: [
-          "Full e-commerce platform for automotive multimedia with smart car-model compatibility filter and MercadoPago payment integration",
-          "Role-based auth with Spring Security; admin panel for catalog management, stock control, and order tracking",
+          "Designed the AI pipeline that converts 100+ monthly Microsoft Teams recordings into structured insights (summaries, action items, opportunities) using Deepgram, GPT-4 via OpenRouter and RAG, synced to HubSpot CRM.",
         ],
       },
       {
-        title: "TicketTrade",
-        subtitle: "Marketplace · Java, Spring Boot, SQL, JavaScript",
+        title: "LinkedIn Bot — AI sales-automation platform (Vennx)",
+        subtitle: "Python, FastAPI, Celery, PostgreSQL, React",
         bullets: [
-          "Marketplace for buying, selling, and trading event tickets with secure auth flow for buyers and sellers",
-          "RESTful backend with Java/Spring Boot, SQL database integration, collaborative development with Git",
+          "Designed a modular automation architecture for prospecting, lead enrichment and outbound messaging (Unipile API, OpenAI/GPT lead classification), with Celery background processing, retry/error recovery and a monitoring dashboard handling 500+ leads per month.",
         ],
       },
     ],
     education_title: "Education",
     education: [
-      { degree: "B.S. Software Engineering", school: "PUC Minas", period: "2023 – Dec 2026" },
-      { degree: "Chemical Engineering — Exchange Program", school: "Politecnico di Milano", period: "Aug – Dec 2022", note: "International academic experience in Milan, Italy" },
-      { degree: "High School & Technical Diploma in Administration", school: "Fundação Torino — International School", period: "2006 – 2022" },
+      { degree: "B.S. in Software Engineering", school: "PUC Minas", period: "Jan 2023 – Jun 2027 (expected)" },
+      { degree: "Chemical Engineering (coursework)", school: "Politecnico di Milano, Italy", period: "Aug 2022 – Dec 2022" },
+      { degree: "International High School Diploma & Technical Diploma in Administration", school: "Fundação Torino", period: "2022" },
     ],
-    certs_title: "Certifications",
+    certs_title: "Training",
     certs: [
-      "Red Hat System Administration (RHCSA)",
-      "Technical Diploma — Administration & Public Management",
-      "International High School Diploma — Fundação Torino",
+      "Red Hat System Administration (certificate of attendance), 2024",
     ],
     langs_title: "Languages",
     langs: [
       { lang: "Portuguese", level: "Native" },
       { lang: "Italian", level: "Native / Fluent" },
-      { lang: "English", level: "Advanced / Professional" },
+      { lang: "English", level: "Professional / Advanced" },
       { lang: "Spanish", level: "Intermediate" },
     ],
   },
   pt: {
     back: "← Voltar ao Portfolio",
     download: "Baixar / Imprimir PDF",
-    tagline: "Engenheiro de Software · IA, Automação & Full-Stack · Python, React, Java",
-    summary_title: "Resumo",
+    tagline: "Engenheiro de Software Full Cycle · TypeScript, Node.js, React, PostgreSQL, AWS · Automação com IA",
+    summary_title: "Resumo Profissional",
     summary:
-      "Estudante de Engenharia de Software na PUC Minas (conclusão em dez/2026) e Estagiário de Tecnologia na Vennx, onde desenvolvo sistemas de automação com IA, integrações via API REST e produtos SaaS full-stack. Experiência em Python, Java (Spring Boot) e React. Formação acadêmica internacional — intercâmbio no Politecnico di Milano — com fluência em 4 idiomas, permitindo colaboração eficaz em equipes globais.",
+      "Engenheiro de Software Full Cycle com 1,5 ano de experiência profissional entregando sistemas em produção de ponta a ponta (TypeScript, Node.js, React, PostgreSQL, AWS) e automação com IA aplicada (LLMs, RAG). Atualmente na One Investimentos, construindo uma plataforma de due diligence corporativa para uma assessoria de investimentos brasileira; antes, na Vennx, entregando SaaS com IA e automação. Cursando Engenharia de Software na PUC Minas (conclusão em jun/2027). Moro no Brasil (UTC-3) e estou disponível para vagas remotas. Trilíngue (português, italiano, inglês).",
     skills_title: "Habilidades Técnicas",
     skill_groups: [
-      { title: "Core", skills: ["Python", "AI / LLM", "Pipelines RAG", "REST API", "Automação", "Web Scraping", "Playwright"] },
-      { title: "Desenvolvimento", skills: ["Java / Spring Boot", "React", "TypeScript", "Next.js", "SQL", "GOLANG", "Flask", "PHP"] },
-      { title: "Ferramentas & Métodos", skills: ["Git", "Supabase", "Linux / Red Hat", "Agile / Scrum / Kanban", "Low-code / No-code"] },
+      { title: "Linguagens", skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL"] },
+      { title: "Backend", skills: ["Node.js (NestJS)", "Design de REST API", "Jobs em segundo plano orientados a eventos", "FastAPI", "Celery", "Spring Boot", "Supabase Edge Functions"] },
+      { title: "Frontend & Dados", skills: ["React", "Next.js", "PostgreSQL", "Drizzle ORM", "Supabase"] },
+      { title: "IA & Automação", skills: ["LLMs (OpenAI GPT-4 / OpenRouter)", "RAG", "Prompt Engineering", "Web Scraping (Playwright)", "Automação de processos"] },
+      { title: "Cloud & DevOps", skills: ["AWS", "Docker", "GitHub Actions (CI/CD)", "Git", "Linux"] },
+      { title: "Testes & Práticas", skills: ["Vitest", "pytest", "JUnit", "Testes unitários / integração / E2E", "TDD", "Code review", "Agile (Scrum, Kanban)"] },
     ],
     experience_title: "Experiência Profissional",
     experience: [
       {
-        title: "Estagiário de Tecnologia",
-        company: "Vennx",
-        period: "Fev 2026 – Presente",
-        location: "Belo Horizonte, MG",
+        title: "Desenvolvedor Full Cycle",
+        company: "One Investimentos",
+        period: "Set 2026 – Presente",
+        location: "Nova Lima, MG · Assessoria de investimentos (R$ 20 bi+ sob assessoria), parceira do BTG Pactual",
         bullets: [
-          "Desenvolveu bot de outreach no LinkedIn com pipeline GPT-4o de qualificação em dois estágios, cobrindo 36 combinações de tópico × ponto de dor",
-          "Reconstruiu a plataforma DeepMeet do zero: arquitetura tenant/usuário, integração com MS Graph API, 30+ bugs de produção resolvidos",
-          "Desenvolveu a Calculadora Vennx — estimador web multi-etapas com integração ao HubSpot CRM e qualificação de leads via OTP por e-mail",
-          "Criou o Detector de Oportunidades: ferramenta de análise de transcrições do Teams com sincronização automática de negócios no HubSpot",
-          "Construiu integrações REST API, scripts Python de automação e soluções de web scraping para extração de dados",
-          "Utilizou Supabase Edge Functions, plataformas low-code/no-code e IA Generativa para acelerar entregas",
+          "Construiu a plataforma de Due Diligence (KYC) de clientes corporativos: consultas em paralelo a dois provedores externos, cruzamento de todos os campos em comum, processos e sócios, e fluxo para o analista resolver divergências (escolher a fonte ou informar valor manual, com ações em lote).",
+          "Automatizou a checagem dos sócios e a extração de evidências dos relatórios em PDF dos provedores; adicionou calculadora de risco com 10 critérios, dossiês de KYC versionados exportados em PDF e fluxo de aprovação em comitê com permissões por perfil e e-mails.",
+          "Entregou um webhook para uma aplicação de conciliação com autorização de operador, trilha de auditoria e contrato documentado; construiu visões de dados financeiros para o time de analytics e jobs em segundo plano orientados a eventos.",
+          "Cobre o módulo com mais de 1.000 testes automatizados unitários e end-to-end (Vitest) e publica via GitHub Actions CI/CD na AWS. Stack: TypeScript, Node.js (NestJS), React (Next.js), PostgreSQL (Drizzle ORM).",
         ],
-        confidential: "Projetos desenvolvidos (confidenciais): LinkedIn Lead Bot, DeepMeet, Calculadora Vennx, Detector de Oportunidades",
       },
       {
-        title: "Administrador e Pesquisador de Mercado",
-        company: "Câmara Ítalo-Brasileira de Comércio, Indústria e Agricultura de MG",
+        title: "Desenvolvedor Full-Stack",
+        company: "Vennx",
+        period: "Jul 2025 – Set 2026",
+        location: "Belo Horizonte, MG · Software com IA, SaaS & automação",
+        bullets: [
+          "Desenvolveu o Detector de Oportunidades, que analisa transcrições do Microsoft Teams e sincroniza automaticamente negócios e contatos no HubSpot CRM, eliminando mais de 10 horas semanais de digitação manual.",
+          "Criou a Calculadora Vennx, estimador web multi-etapas com integração ao HubSpot CRM e qualificação de leads por OTP via e-mail, alimentando o funil comercial com leads qualificados.",
+          "Construiu 6 integrações via API REST (HubSpot, Teams, Deepgram, OpenRouter, Unipile, Supabase), automações em Python e web scraping, e entregou funcionalidades em 4 produtos SaaS internos com Supabase Edge Functions e IA Generativa (LLMs).",
+        ],
+      },
+      {
+        title: "Estagiário de Pesquisa de Mercado",
+        company: "Câmara Ítalo-Brasileira de Comércio",
         period: "Jun 2021 – Dez 2021",
         location: "Belo Horizonte, MG",
         bullets: [
-          "Realizou análise de dados de mercado e pesquisa de tendências para apoiar a tomada de decisões estratégicas",
-          "Desenvolveu habilidades de comunicação com clientes em ambiente multilíngue; contribuiu para o diploma técnico em Administração",
+          "Pesquisa de mercado e análise de tendências para empresas associadas, com atendimento a clientes em português, italiano e inglês.",
         ],
       },
     ],
     projects_title: "Projetos",
     projects: [
       {
-        title: "DePinho Multimídias",
-        subtitle: "E-commerce · Java, Spring Boot, MySQL, Maven",
-        github: "https://github.com/renatoctti/DePinhoMultimidias",
+        title: "DeepMeet — plataforma de inteligência de reuniões com IA (Vennx)",
+        subtitle: "Python, FastAPI, React, GPT-4, RAG",
         bullets: [
-          "Plataforma completa de e-commerce para multimídia automotiva com filtro inteligente de compatibilidade e integração com MercadoPago",
-          "Autenticação com controle de acesso por papel via Spring Security; painel admin para gestão de catálogo, estoque e pedidos",
+          "Projetou o pipeline de IA que converte mais de 100 gravações mensais do Microsoft Teams em insights estruturados (resumos, itens de ação, oportunidades) com Deepgram, GPT-4 via OpenRouter e RAG, sincronizado ao HubSpot CRM.",
         ],
       },
       {
-        title: "TicketTrade",
-        subtitle: "Marketplace · Java, Spring Boot, SQL, JavaScript",
+        title: "LinkedIn Bot — plataforma de automação de vendas com IA (Vennx)",
+        subtitle: "Python, FastAPI, Celery, PostgreSQL, React",
         bullets: [
-          "Marketplace para compra, venda e troca de ingressos para eventos com fluxo de autenticação seguro",
-          "Backend RESTful com Java/Spring Boot, banco SQL e desenvolvimento colaborativo com Git",
+          "Projetou uma arquitetura modular de automação para prospecção, enriquecimento de leads e mensagens (API Unipile, classificação de leads com OpenAI/GPT), com processamento em segundo plano via Celery, recuperação de falhas e dashboard de monitoramento para mais de 500 leads por mês.",
         ],
       },
     ],
     education_title: "Formação Acadêmica",
     education: [
-      { degree: "Bacharelado em Engenharia de Software", school: "PUC Minas", period: "2023 – Dez 2026" },
-      { degree: "Engenharia Química — Programa de Intercâmbio", school: "Politecnico di Milano", period: "Ago – Dez 2022", note: "Experiência acadêmica internacional em Milão, Itália" },
-      { degree: "Ensino Médio & Diploma Técnico em Administração", school: "Fundação Torino — Escola Internacional", period: "2006 – 2022" },
+      { degree: "Bacharelado em Engenharia de Software", school: "PUC Minas", period: "Jan 2023 – Jun 2027 (previsão)" },
+      { degree: "Engenharia Química (disciplinas cursadas)", school: "Politecnico di Milano, Itália", period: "Ago 2022 – Dez 2022" },
+      { degree: "Ensino Médio Internacional & Diploma Técnico em Administração", school: "Fundação Torino", period: "2022" },
     ],
-    certs_title: "Certificações",
+    certs_title: "Formação Complementar",
     certs: [
-      "Administração de Sistemas Red Hat (RHCSA)",
-      "Diploma Técnico — Administração e Gestão Pública",
-      "Diploma de Ensino Médio Internacional — Fundação Torino",
+      "Administração de Sistemas Red Hat (certificado de participação), 2024",
     ],
     langs_title: "Idiomas",
     langs: [
       { lang: "Português", level: "Nativo" },
       { lang: "Italiano", level: "Nativo / Fluente" },
-      { lang: "Inglês", level: "Avançado / Profissional" },
+      { lang: "Inglês", level: "Profissional / Avançado" },
       { lang: "Espanhol", level: "Intermediário" },
     ],
   },
@@ -267,9 +277,9 @@ export default function CVPage() {
           <div className="flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-[#9ca3af] print:text-gray-600">
             <span className="flex items-center gap-1.5"><Phone size={11} /> +55 (31) 99520-4041</span>
             <span className="flex items-center gap-1.5"><Mail size={11} /> renato.cazzoletti7@gmail.com</span>
-            <span className="flex items-center gap-1.5"><MapPin size={11} /> Belo Horizonte, MG — Brazil</span>
-            <a href="https://linkedin.com/in/renatocazzoletti-179862299" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white print:text-gray-600 transition-colors">
-              <LinkedinIcon /> linkedin.com/in/renatocazzoletti
+            <span className="flex items-center gap-1.5"><MapPin size={11} /> Belo Horizonte, MG — Brazil (UTC-3)</span>
+            <a href="https://linkedin.com/in/renato-cazzoletti" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white print:text-gray-600 transition-colors">
+              <LinkedinIcon /> linkedin.com/in/renato-cazzoletti
             </a>
             <a href="https://github.com/renatoctti" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white print:text-gray-600 transition-colors">
               <GithubIcon /> github.com/renatoctti
@@ -314,9 +324,6 @@ export default function CVPage() {
                   </li>
                 ))}
               </ul>
-              {exp.confidential && (
-                <p className="mt-2 text-[10px] text-[#9ca3af]/40 print:text-gray-400 italic">{exp.confidential}</p>
-              )}
             </div>
           ))}
         </Section>
@@ -327,11 +334,6 @@ export default function CVPage() {
             <div key={i} className="mb-4 last:mb-0">
               <div className="flex items-center gap-2 mb-0.5">
                 <span className="text-white print:text-gray-900 font-semibold text-sm">{p.title}</span>
-                {p.github && (
-                  <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-[#7c3aed] print:text-purple-700 text-[10px] hover:underline">
-                    GitHub ↗
-                  </a>
-                )}
               </div>
               <p className="text-[#9ca3af]/60 print:text-gray-400 text-xs mb-1.5">{p.subtitle}</p>
               <ul className="space-y-1">
@@ -354,7 +356,6 @@ export default function CVPage() {
                 <div>
                   <p className="text-white print:text-gray-900 font-semibold text-sm">{e.degree}</p>
                   <p className="text-[#9ca3af]/70 print:text-gray-500 text-xs">{e.school}</p>
-                  {e.note && <p className="text-[#9ca3af]/50 print:text-gray-400 text-xs italic">{e.note}</p>}
                 </div>
                 <span className="text-[#9ca3af] print:text-gray-500 text-xs whitespace-nowrap">{e.period}</span>
               </div>

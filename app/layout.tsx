@@ -16,13 +16,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Renato Cazzoletti — Software Engineer",
   description:
-    "Portfolio of Renato Cazzoletti — Software Engineering student at PUC Minas, AI & automation enthusiast, technology intern at Vennx.",
-  keywords: ["software engineer", "portfolio", "python", "AI", "automation", "React", "Next.js"],
+    "Portfolio of Renato Cazzoletti — Full Cycle Software Engineer (TypeScript, Node.js, React, PostgreSQL, AWS) working on AI automation, available for remote roles.",
+  keywords: ["software engineer", "full cycle", "portfolio", "TypeScript", "Node.js", "NestJS", "React", "PostgreSQL", "AWS", "AI", "automation", "remote"],
   authors: [{ name: "Renato Cazzoletti" }],
   openGraph: {
     title: "Renato Cazzoletti — Software Engineer",
     description:
-      "Building intelligent tools that automate the complex and amplify human potential.",
+      "Shipping production systems end to end, and applying AI to automate the complex.",
     type: "website",
   },
 };
