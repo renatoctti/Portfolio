@@ -14,7 +14,7 @@ export default function Experience() {
       period: t.experience.one_period,
       location: t.experience.one_location,
       description: t.experience.one_desc,
-      tags: ["TypeScript", "NestJS", "React", "PostgreSQL", "AWS", "Vitest"],
+      tags: ["TypeScript", "NestJS", "React", "PostgreSQL", "AWS", "Spec-driven dev"],
       current: true,
     },
     {
@@ -23,7 +23,7 @@ export default function Experience() {
       period: t.experience.vennx_period,
       location: t.experience.vennx_location,
       description: t.experience.vennx_desc,
-      tags: ["Python", "AI/LLM", "REST API", "Playwright", "Supabase", "React"],
+      tags: ["Python", "LLMs", "RAG", "FastAPI", "Supabase", "HubSpot"],
       current: false,
     },
     {

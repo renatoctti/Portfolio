@@ -35,7 +35,7 @@ const KW_EN = {
     { text: "NestJS",                type: "tech"   },
     { text: "React",                 type: "tech"   },
     { text: "PostgreSQL",            type: "tech"   },
-    { text: "AI-powered SaaS",       type: "tech"   },
+    { text: "LLM applications",      type: "tech"   },
     { text: "REST API integrations", type: "tech"   },
     { text: "automation",            type: "tech"   },
   ],
@@ -46,13 +46,13 @@ const KW_EN = {
     { text: "Italian",               type: "tech"   },
     { text: "English",               type: "tech"   },
     { text: "Spanish",               type: "tech"   },
-    { text: "remote roles",          type: "proper" },
+    { text: "full-time remote roles",type: "proper" },
   ],
   p3: [
-    { text: "AI",                  type: "tech"  },
+    { text: "LLM applications",     type: "tech"  },
     { text: "automation",          type: "tech"  },
-    { text: "real business impact",type: "proper"},
-    { text: "intelligent software",type: "tech"  },
+    { text: "business rules kept in code",type: "proper"},
+    { text: "public on GitHub",type: "tech"  },
   ],
 } satisfies Record<string, Keyword[]>;
 
@@ -64,7 +64,7 @@ const KW_PT = {
     { text: "NestJS",                   type: "tech"   },
     { text: "React",                    type: "tech"   },
     { text: "PostgreSQL",               type: "tech"   },
-    { text: "SaaS com IA",              type: "tech"   },
+    { text: "aplicações com LLM",        type: "tech"   },
     { text: "integrações via API REST", type: "tech"   },
     { text: "automação",                type: "tech"   },
   ],
@@ -75,13 +75,13 @@ const KW_PT = {
     { text: "italiano",              type: "tech"   },
     { text: "inglês",                type: "tech"   },
     { text: "espanhol",              type: "tech"   },
-    { text: "vagas remotas",         type: "proper" },
+    { text: "vagas remotas em tempo integral", type: "proper" },
   ],
   p3: [
-    { text: "IA",                              type: "tech"   },
+    { text: "aplicações com LLM",                              type: "tech"   },
     { text: "automação",                       type: "tech"   },
-    { text: "impacto real nos negócios",       type: "proper" },
-    { text: "software limpo e inteligente",    type: "tech"   },
+    { text: "regras de negócio no código",       type: "proper" },
+    { text: "público no GitHub",    type: "tech"   },
   ],
 } satisfies Record<string, Keyword[]>;
 
@@ -89,7 +89,7 @@ const KW_PT = {
 const getHighlights = (t: ReturnType<typeof useLanguage>["t"]) => [
   { icon: Globe,    title: t.about.highlight_languages, sub: t.about.highlight_languages_sub },
   { icon: Plane,    title: t.about.highlight_intl,      sub: t.about.highlight_intl_sub      },
-  { icon: Terminal, title: t.about.highlight_redhat,    sub: t.about.highlight_redhat_sub    },
+  { icon: Terminal, title: t.about.highlight_oss,    sub: t.about.highlight_oss_sub    },
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Bot, Mic, Calculator, BarChart2, Car, Ticket, ShieldCheck } from "lucide-react";
+import { Bot, Mic, Search, Plug, FlaskConical, Plane, ShieldCheck, Receipt } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimateIn from "./AnimateIn";
 
@@ -12,71 +12,90 @@ export default function Projects() {
   const [dir, setDir] = useState<"left" | "right">("right");
   const [animating, setAnimating] = useState(false);
 
-  const projects = [
+  type Status = "private" | "public" | "wip";
+  const projects: {
+    title: string;
+    description: string[];
+    stack: string[];
+    integrations: string[];
+    icon: ProjectIcon;
+    github: string | null;
+    status: Status;
+  }[] = [
+    {
+      title: t.projects.melo_title,
+      description: t.projects.melo_desc as string[],
+      stack: ["Python", "LangGraph", "SQLite", "pytest", "GitHub Actions"],
+      integrations: ["Claude", "OpenRouter", "text-embedding-3-small", "MCP"],
+      icon: Bot,
+      github: "https://github.com/renatoctti/emporio-da-musica-agent",
+      status: "public",
+    },
+    {
+      title: t.projects.rag_title,
+      description: t.projects.rag_desc as string[],
+      stack: ["TypeScript", "PostgreSQL", "pgvector", "Docker", "GitHub Actions"],
+      integrations: ["BEIR SciFact", "bge-small-en-v1.5", "BM25", "RRF"],
+      icon: Search,
+      github: "https://github.com/renatoctti/rag-search-eval",
+      status: "public",
+    },
+    {
+      title: t.projects.mcp_title,
+      description: t.projects.mcp_desc as string[],
+      stack: ["TypeScript", "Node.js", "MCP SDK", "GitHub Actions"],
+      integrations: ["BrasilAPI", "npm", "MCP registry"],
+      icon: Plug,
+      github: "https://github.com/renatoctti/brasilapi-mcp",
+      status: "public",
+    },
+    {
+      title: t.projects.gym_title,
+      description: t.projects.gym_desc as string[],
+      stack: ["TypeScript", "Node.js 24", "node:test", "GitHub Actions"],
+      integrations: ["Node permission model", "OpenRouter", "Bootstrap CIs"],
+      icon: FlaskConical,
+      github: "https://github.com/renatoctti/coding-agent-gym",
+      status: "wip",
+    },
+    {
+      title: t.projects.flight_title,
+      description: t.projects.flight_desc as string[],
+      stack: ["TypeScript", "NestJS", "React", "Next.js", "PostgreSQL"],
+      integrations: ["Product-owner discovery", "Spec-driven development", "Vitest"],
+      icon: Plane,
+      github: null,
+      status: "private",
+    },
     {
       title: t.projects.kyc_title,
       description: t.projects.kyc_desc as string[],
       stack: ["TypeScript", "NestJS", "React", "Next.js", "PostgreSQL", "Drizzle ORM"],
-      integrations: ["External data providers", "pg-boss", "GitHub Actions", "AWS", "Vitest"],
-      icon: ShieldCheck as ProjectIcon,
-      github: null as string | null,
-      private: true,
+      integrations: ["External data providers", "Microsoft Graph", "JSON Schema", "pg-boss", "AWS"],
+      icon: ShieldCheck,
+      github: null,
+      status: "private",
     },
     {
-      title: t.projects.linkedin_bot_title,
-      description: t.projects.linkedin_bot_desc as string[],
-      stack: ["Python", "Flask", "Supabase"],
-      integrations: ["Unipile API", "OpenRouter API", "GPT-4o"],
-      icon: Bot as ProjectIcon,
-      github: null as string | null,
-      private: true,
-    },
-    {
-      title: t.projects.deepmeet_title,
-      description: t.projects.deepmeet_desc as string[],
-      stack: ["React", "TypeScript", "Vite", "Tailwind", "Supabase", "Edge Functions"],
-      integrations: ["MS Graph API", "Deepgram API", "OpenRouter API", "Supabase Auth"],
-      icon: Mic as ProjectIcon,
-      github: null as string | null,
-      private: true,
-    },
-    {
-      title: t.projects.calculadora_title,
-      description: t.projects.calculadora_desc as string[],
-      stack: ["React 19", "TanStack Router", "Tailwind", "Supabase", "Framer Motion", "Zod"],
-      integrations: ["HubSpot API", "Supabase Auth", "Email OTP"],
-      icon: Calculator as ProjectIcon,
-      github: null as string | null,
-      private: true,
+      title: t.projects.billing_title,
+      description: t.projects.billing_desc as string[],
+      stack: ["TypeScript", "NestJS", "React", "PostgreSQL"],
+      integrations: ["NFS-e", "Excel export", "Data lake view"],
+      icon: Receipt,
+      github: null,
+      status: "private",
     },
     {
       title: t.projects.oportunidades_title,
       description: t.projects.oportunidades_desc as string[],
-      stack: ["Python", "pandas"],
-      integrations: ["OpenRouter API", "GPT-4", "HubSpot API", "Supabase", "Deepgram"],
-      icon: BarChart2 as ProjectIcon,
-      github: null as string | null,
-      private: true,
-    },
-    {
-      title: t.projects.depinho_title,
-      description: t.projects.depinho_desc as string[],
-      stack: ["Java", "Spring Boot", "MySQL", "Maven"],
-      integrations: ["REST API", "JDBC", "Vercel Deploy"],
-      icon: Car as ProjectIcon,
-      github: "https://github.com/renatoctti/DePinhoMultimidias",
-      private: false,
-    },
-    {
-      title: t.projects.tickettrade_title,
-      description: t.projects.tickettrade_desc as string[],
-      stack: ["Java", "Spring Boot", "SQL", "JavaScript", "HTML", "CSS"],
-      integrations: ["REST API", "Git"],
-      icon: Ticket as ProjectIcon,
-      github: null as string | null,
-      private: false,
+      stack: ["Python", "pandas", "React", "TypeScript", "Supabase"],
+      integrations: ["OpenRouter", "Deepgram", "MS Graph API", "HubSpot API"],
+      icon: Mic,
+      github: null,
+      status: "private",
     },
   ];
+
 
   const total = projects.length;
   const project = projects[active];
@@ -155,15 +174,19 @@ export default function Projects() {
                     </div>
                     <div>
                       <h3 className="text-white font-bold text-2xl leading-tight">{project.title}</h3>
-                      {project.private && (
-                        <span className="inline-flex items-center gap-1.5 text-xs mt-1 text-[#9ca3af]">
+                      <span className="inline-flex items-center gap-1.5 text-xs mt-1 text-[#9ca3af]">
+                        {project.status === "private" && (
                           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                             <rect x="3" y="11" width="18" height="11" rx="2" />
                             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                           </svg>
-                          {t.projects.private_badge}
-                        </span>
-                      )}
+                        )}
+                        {project.status === "private"
+                          ? t.projects.private_badge
+                          : project.status === "wip"
+                            ? t.projects.wip_badge
+                            : t.projects.public_badge}
+                      </span>
                     </div>
                   </div>
                   {project.github && (

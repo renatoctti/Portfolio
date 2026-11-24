@@ -14,15 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Renato Cazzoletti — Software Engineer",
+  title: "Renato Cazzoletti — Full-Stack Engineer, AI / LLM Applications",
   description:
-    "Portfolio of Renato Cazzoletti — Full Cycle Software Engineer (TypeScript, Node.js, React, PostgreSQL, AWS) working on AI automation, available for remote roles.",
-  keywords: ["software engineer", "full cycle", "portfolio", "TypeScript", "Node.js", "NestJS", "React", "PostgreSQL", "AWS", "AI", "automation", "remote"],
+    "Portfolio of Renato Cazzoletti — full-stack software engineer building LLM applications (agents, RAG, evaluation) and production systems with TypeScript, Python, React and PostgreSQL. Available for remote roles.",
+  keywords: ["software engineer", "full cycle", "portfolio", "TypeScript", "Node.js", "NestJS", "React", "PostgreSQL", "AWS", "AI", "LLM", "RAG", "agents", "MCP", "Python", "automation", "remote"],
   authors: [{ name: "Renato Cazzoletti" }],
   openGraph: {
-    title: "Renato Cazzoletti — Software Engineer",
+    title: "Renato Cazzoletti — Full-Stack Engineer, AI / LLM Applications",
     description:
-      "Shipping production systems end to end, and applying AI to automate the complex.",
+      "Production systems end to end, and LLM applications that are measured: agents, RAG and evaluation.",
     type: "website",
   },
 };

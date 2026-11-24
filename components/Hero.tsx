@@ -73,7 +73,7 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  const projects  = useCounter(7, 1200, ready);
+  const projects  = useCounter(31, 1400, ready);
   const languages = useCounter(4, 1000, ready);
   const roles = t.hero.roles as string[];
 
